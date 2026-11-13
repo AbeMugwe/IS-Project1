@@ -24,7 +24,7 @@ page_header('Log in');
 if ($error) echo '<p class="error">'.e($error).'</p>';
 ?>
 <form method="post"><input type="hidden" name="csrf" value="<?= e(csrf_token()) ?>">
-<label>Username <input required name="username" value="<?= e((string)($_POST['username'] ?? '')) ?>"></label>
+<label>Student ID <input required name="username" value="<?= e((string)($_POST['username'] ?? '')) ?>"></label>
 <label>Password <input required type="password" name="password"></label>
 <button type="submit">Log in</button></form>
 <?php page_footer(); ?>

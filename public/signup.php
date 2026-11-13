@@ -27,7 +27,7 @@ if ($error) echo '<p class="error">'.e($error).'</p>';
 if ($success) echo '<p class="success">'.e($success).'</p>';
 ?>
 <form method="post"><input type="hidden" name="csrf" value="<?= e(csrf_token()) ?>">
-<label>Username <input required name="username" pattern="[a-zA-Z0-9_]{3,30}" maxlength="30" value="<?= e((string)($_POST['username'] ?? '')) ?>"></label>
+<label>Student ID <input required name="username" pattern="[a-zA-Z0-9_]{3,30}" maxlength="30" value="<?= e((string)($_POST['username'] ?? '')) ?>"></label>
 <label>Email <input required type="email" name="email" value="<?= e((string)($_POST['email'] ?? '')) ?>"></label>
 <label>Password <input required type="password" name="password" minlength="8"></label>
 <button type="submit">Register</button></form>
