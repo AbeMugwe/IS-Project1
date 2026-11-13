@@ -1,0 +1,15 @@
+name: Ephemeral compute demo
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Show temporary runner executing code
+        run: |
+          echo "This code runs on a GitHub-hosted runner"
+          hostname
+          uname -a
+          php -v
